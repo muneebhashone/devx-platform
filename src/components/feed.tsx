@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+
 import { ThumbsUp, MessageSquare, Share2, Code, Image, Smile, Send, Search, Bell, User, Users, Calendar, Video, Menu, X } from 'lucide-react';
 
 const BackgroundGradient = () => (
@@ -185,7 +185,7 @@ interface PostProps {
   time: string;
 }
 
-const Post: React.FC<PostProps> = ({ id, username, content, likes, comments, time }) => {
+const Post: React.FC<PostProps> = ({username, content, likes, comments, time }) => {
     const [isLiked, setIsLiked] = useState(false);
     const [likeCount, setLikeCount] = useState(likes);
     const [showComments, setShowComments] = useState(false);
@@ -400,3 +400,4 @@ const Comment: React.FC<CommentProps> = ({ username, content, likes, time }) => 
   };
 
 export default DevSocialFeed;
+
