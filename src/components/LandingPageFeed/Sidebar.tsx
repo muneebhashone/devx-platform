@@ -31,7 +31,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             animate={{ x: 0 }}
             exit={{ x: side === "left" ? "-100%" : "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 500 }}
-            className={`fixed ${side}-0 top-0 bottom-0 w-80 bg-gray-800 border-${
+            className={`fixed ${side}-0 top-0 bottom-0 w-full lg:w-80 bg-gray-800 border-${
               side === "left" ? "r" : "l"
             } border-gray-700 p-4 overflow-y-auto z-50 lg:hidden`}
           >
@@ -48,7 +48,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       )}
     </AnimatePresence>
     <div
-      className={`hidden lg:block fixed ${side}-0 lg:mt-[57px] top-0 bottom-0 w-80 bg-gray-800 border-${
+      className={`hidden lg:block fixed ${side}-0 lg:mt-[57px] top-0 bottom-0 w-1/2 lg:w-80 bg-gray-800 border-${
         side === "left" ? "r" : "l"
       } border-gray-700 p-4 overflow-y-auto z-50`}
     >

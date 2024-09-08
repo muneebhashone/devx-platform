@@ -311,7 +311,7 @@ const Comment: React.FC<CommentProps> = ({ username, content, likes, time }) => 
   );
 
   const DevSocialFeed: React.FC = () => {
-    const [posts, setPosts] = useState([
+    const [posts] = useState([
       {
         id: 1,
         username: "alice_dev",

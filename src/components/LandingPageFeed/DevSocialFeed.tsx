@@ -105,7 +105,7 @@ const DevSocialFeed: React.FC = () => {
         isOpen={rightSidebarOpen}
         onClose={() => setRightSidebarOpen(false)}
       />
-      <div className="relative z-10 max-w-4xl mx-auto p-4 mt-16">
+      <div className="relative z-10 md:max-w-[50%] lg:max-w-[40%] mx-auto p-4 mt-16">
         <PostForm />
         <PostList posts={posts} />
       </div>
