@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Menu, Search, User, Users } from "lucide-react";
+import { Menu, Search,Users } from "lucide-react";
 
 import AnimatedNotificationMenu from "./AnimatedNotificationMenu";
+
+import ProfileMenu from "./ProfileMenu";
 
 interface HeaderProps {
   toggleLeftSidebar: () => void;
@@ -13,8 +15,6 @@ const Header: React.FC<HeaderProps> = ({
   toggleLeftSidebar,
   toggleRightSidebar,
 }) => {
-
-
   return (
     <header className="fixed top-0 left-0 right-0 bg-gray-800 border-b border-gray-700 py-2 px-4 z-50">
       <div className="mx-auto flex justify-between items-center">
@@ -64,14 +64,18 @@ const Header: React.FC<HeaderProps> = ({
               </div>
             </PopoverContent>
           </Popover> */}
-          <AnimatedNotificationMenu />
           <motion.button
             whileTap={{ scale: 0.95 }}
-            className="text-gray-300 hidden lg:block"
+            className="text-gray-300 hidden md:block"
             onClick={toggleRightSidebar}
           >
-            <User className="h-5 w-5" />
+            <ProfileMenu />
           </motion.button>
+
+          <div className="hidden md:block">
+            <AnimatedNotificationMenu />
+          </div>
+
           <motion.button
             whileTap={{ scale: 0.95 }}
             className="lg:hidden text-gray-300"

@@ -1,12 +1,13 @@
 "use client";
+
+
+
 import React from "react";
 import { motion } from "framer-motion";
-import BackgroundBeamsWithCollision from "@/components/OnboardingScreen/BackgroundBeamsWithCollision";
-import LoginCard from "@/components/OnboardingScreen/LoginCard";
+import BackgroundBeamsWithCollision from "./BackgroundBeamsWithCollision";
+import LoginCard from "./LoginCard";
 
-
-
-const page = () => {
+const OnboardingScreen: React.FC = () => {
   return (
     <BackgroundBeamsWithCollision>
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4">
@@ -41,7 +42,7 @@ const page = () => {
         </motion.div>
       </div>
     </BackgroundBeamsWithCollision>
-  )
+  );
 };
 
-export default page;
+export default OnboardingScreen;
