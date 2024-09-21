@@ -50,7 +50,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     <div
       className={`hidden lg:block fixed ${side}-0 lg:mt-[57px] top-0 bottom-0 w-1/2 lg:w-80 bg-gray-800 border-${
         side === "left" ? "r" : "l"
-      } border-gray-700 p-4 overflow-y-auto z-50`}
+      } border-gray-700 p-4 overflow-y-auto`}
     >
       {children}
     </div>
