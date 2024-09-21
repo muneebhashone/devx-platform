@@ -14,7 +14,6 @@ import {
   Settings,
   Shield,
   User,
-  Users,
   UsersIcon,
 } from "lucide-react";
 import AdditionalAccounts from "@/components/Settings/AdditionalAccounts";
