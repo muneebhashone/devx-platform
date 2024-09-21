@@ -43,13 +43,18 @@ const config: Config = {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
-  			chart: {
-  				'1': 'hsl(var(--chart-1))',
-  				'2': 'hsl(var(--chart-2))',
-  				'3': 'hsl(var(--chart-3))',
-  				'4': 'hsl(var(--chart-4))',
-  				'5': 'hsl(var(--chart-5))'
-  			}
+  			'post-border': 'hsl(var(--post-border))',
+  			'post-username': 'hsl(var(--post-username))',
+  			'post-time': 'hsl(var(--post-time))',
+  			'post-content': 'hsl(var(--post-content))',
+  			'post-action': 'hsl(var(--post-action))',
+  			'post-action-hover': {
+  				like: 'hsl(var(--post-action-hover-like))',
+  				comment: 'hsl(var(--post-action-hover-comment))',
+  				share: 'hsl(var(--post-action-hover-share))',
+  			},
+  			'load-more': 'hsl(var(--load-more))',
+  			'load-more-hover': 'hsl(var(--load-more-hover))',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -61,3 +66,4 @@ const config: Config = {
   plugins: [require("tailwindcss-animate")],
 };
 export default config;
+

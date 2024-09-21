@@ -1,9 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Menu, Search, Bell, User, Users } from "lucide-react";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { Menu, Search, User, Users } from "lucide-react";
+
+import AnimatedNotificationMenu from "./AnimatedNotificationMenu";
 
 interface HeaderProps {
   toggleLeftSidebar: () => void;
@@ -14,13 +13,7 @@ const Header: React.FC<HeaderProps> = ({
   toggleLeftSidebar,
   toggleRightSidebar,
 }) => {
-  const notifications = [
-    { id: 1, content: "John Doe mentioned you in a post", time: "2m ago" },
-    { id: 2, content: "New follower: Jane Smith", time: "1h ago" },
-    { id: 3, content: "Your post received 50 likes", time: "3h ago" },
-    { id: 4, content: "New comment on your post", time: "5h ago" },
-    { id: 5, content: "Trending topic: #ReactJS", time: "1d ago" },
-  ];
+
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-gray-800 border-b border-gray-700 py-2 px-4 z-50">
@@ -46,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
         <div className="flex items-center space-x-4">
-          <Popover>
+          {/* <Popover>
             <PopoverTrigger asChild>
               <Button variant="ghost" size="icon" className="text-gray-300">
                 <Bell className="h-5 w-5" />
@@ -70,7 +63,8 @@ const Header: React.FC<HeaderProps> = ({
                 </Button>
               </div>
             </PopoverContent>
-          </Popover>
+          </Popover> */}
+          <AnimatedNotificationMenu />
           <motion.button
             whileTap={{ scale: 0.95 }}
             className="text-gray-300 hidden lg:block"

@@ -91,7 +91,7 @@ const DevSocialFeed: React.FC = () => {
   const [rightSidebarOpen, setRightSidebarOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gray-900 text-gray-200 font-sans">
+    <div className="relative min-h-screen overflow-hidden bg-background text-foreground font-sans">
       <BackgroundGradient />
       <Header
         toggleLeftSidebar={() => setLeftSidebarOpen(!leftSidebarOpen)}
