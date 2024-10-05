@@ -19,10 +19,12 @@ const ProfileMenu = () => {
       </PopoverTrigger>
       <PopoverContent className="w-64 bg-gray-800 border-gray-700 rounded-lg shadow-lg p-2 transform -translate-x-[0]">
         <div className="space-y-2">
-          <Button className="w-full flex items-center justify-start px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md transition-colors duration-200">
-            <User className="h-4 w-4 mr-3" />
-            Profile
-          </Button>
+          <Link href="/profile">
+            <Button className="w-full flex items-center justify-start px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md transition-colors duration-200">
+              <User className="h-4 w-4 mr-3" />
+              Profile
+            </Button>
+          </Link>
           <Link href="/settings">
             <Button className="w-full flex items-center justify-start px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md transition-colors duration-200">
               <Settings className="h-4 w-4 mr-3" />
