@@ -64,6 +64,11 @@ const Header: React.FC<HeaderProps> = ({
               </div>
             </PopoverContent>
           </Popover> */}
+     
+
+          <div className="hidden md:block">
+            <AnimatedNotificationMenu />
+          </div>
           <motion.button
             whileTap={{ scale: 0.95 }}
             className="text-gray-300 hidden md:block"
@@ -71,10 +76,6 @@ const Header: React.FC<HeaderProps> = ({
           >
             <ProfileMenu />
           </motion.button>
-
-          <div className="hidden md:block">
-            <AnimatedNotificationMenu />
-          </div>
 
           <motion.button
             whileTap={{ scale: 0.95 }}
