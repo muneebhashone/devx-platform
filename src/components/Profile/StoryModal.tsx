@@ -55,7 +55,7 @@ const StoryModal: React.FC<StoryModalProps> = ({ stories, initialStoryIndex, onC
   const currentStory = stories[currentStoryIndex];
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-background bg-opacity-75 flex items-center justify-center z-50">
       <div className="relative w-full max-w-lg">
         <div className="absolute top-0 left-0 right-0 h-1 bg-gray-600">
           <div

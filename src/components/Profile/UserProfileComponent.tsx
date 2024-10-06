@@ -54,7 +54,7 @@ const UserProfileComponent: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-800 text-gray-200">
+    <div className="bg-background text-foreground">
       <div className="max-w-[1920px] mx-auto p-8">
         <div className="flex flex-col md:flex-row gap-8">
           {/* Left sidebar */}

@@ -173,7 +173,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
               alt="Profile Photo"
               width={128}
               height={128}
-              className="rounded-full border-4 border-gray-900"
+              className="rounded-full border-4 border-background"
             />
             <Button
               className="absolute bottom-0 right-0 rounded-full p-2 bg-gray-900 hover:bg-gray-800"

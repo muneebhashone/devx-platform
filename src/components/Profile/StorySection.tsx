@@ -35,7 +35,7 @@ const StorySection: React.FC<StorySectionProps> = ({
             </div>
           </div>
         </div>
-        <p className="font-medium text-white truncate w-16 text-center">
+        <p className="font-medium text-foreground truncate w-16 text-center">
           Add Story
         </p>
       </div>

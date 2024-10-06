@@ -72,7 +72,7 @@ export default function SettingsPage() {
   return (
     <>
       <Header toggleLeftSidebar={() => {}} toggleRightSidebar={() => {}} />
-      <div className="flex min-h-screen bg-[#1e2330] text-gray-200 mt-16">
+      <div className="flex min-h-screen bg-background text-foreground mt-16">
         <Sidebar
           menuItems={menuItems}
           activeMenuItem={activeMenuItem}
