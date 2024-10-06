@@ -23,7 +23,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.5 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black z-40 lg:hidden"
+            className="fixed inset-0 bg-primary z-40 lg:hidden"
             onClick={onClose}
           />
           <motion.div
@@ -31,13 +31,13 @@ const Sidebar: React.FC<SidebarProps> = ({
             animate={{ x: 0 }}
             exit={{ x: side === "left" ? "-100%" : "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 500 }}
-            className={`fixed ${side}-0 top-0 bottom-0 w-full lg:w-80 bg-gray-800 border-${
+            className={`fixed ${side}-0 top-0 bottom-0 w-full lg:w-80 bg-primary border-${
               side === "left" ? "r" : "l"
-            } border-gray-700 p-4 overflow-y-auto z-50 lg:hidden`}
+            } border-secondary p-4 overflow-y-auto z-50 lg:hidden`}
           >
             <motion.button
               whileTap={{ scale: 0.95 }}
-              className="absolute top-2 right-2 text-gray-300"
+              className="absolute top-2 right-2 text-white"
               onClick={onClose}
             >
               <X className="h-6 w-6" />
@@ -48,9 +48,9 @@ const Sidebar: React.FC<SidebarProps> = ({
       )}
     </AnimatePresence>
     <div
-      className={`hidden lg:block fixed ${side}-0 lg:mt-[57px] top-0 bottom-0 w-1/2 lg:w-80 bg-gray-800 border-${
+      className={`hidden lg:block fixed ${side}-0 lg:mt-[57px] pt-10 top-0 bottom-0 w-1/2 lg:w-80 bg-primary border-${
         side === "left" ? "r" : "l"
-      } border-gray-700 p-4 overflow-y-auto`}
+      } border-secondary p-6 overflow-y-auto`}
     >
       {children}
     </div>

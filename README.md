@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DevX
 
-## Getting Started
+![DevX Logo](./LOGO.svg)
 
-First, run the development server:
+DevX is an open-source professional social platform designed specifically for software engineers and developers. Connect, collaborate, and grow your career within our thriving community.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Professional Networking**: Connect with like-minded developers and industry experts
+- **Project Collaboration**: Find and join exciting open-source projects
+- **Skill Showcase**: Highlight your expertise and share your portfolio
+- **Job Opportunities**: Discover career opportunities tailored for developers
+- **Knowledge Sharing**: Engage in discussions and share valuable insights
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Backend**: TypeScript, Node.js, Fastify (separate repository)
+- **API**: GraphQL with Mercurius and Pothos (separate repository)
+- **Database**: PostgreSQL with Drizzle ORM (separate repository)
+- **Frontend**: Next.js
 
-## Learn More
+## 🚦 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js (v18 or later)
+- pnpm
+- PostgreSQL
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1. Clone the repository:
+   ```
+   git clone https://github.com/muneebhashone/devx-platform.git
+   cd devx-platform
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Install dependencies:
+   ```
+   pnpm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Start the development server:
+   ```
+   pnpm run dev
+   ```
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for more details.
+
+## 📄 License
+
+DevX is open-source software licensed under the [AGPL-3.0 license](LICENSE).
+
+
+<p align="center">Built with ❤️ by the DevX team</p>

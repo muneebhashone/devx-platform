@@ -48,21 +48,21 @@ const Post: React.FC<PostProps> = ({username, content, likes, comments, time }) 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="mb-4 border-b border-gray-700 pb-4"
+          className="mb-4 border-2 p-4 rounded-lg border-secondary pb-4 shadow-lg"
         >
           <div className="flex items-center mb-3">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white text-sm font-medium">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center border-secondary border-2 text-white text-sm font-medium">
               {username[0].toUpperCase()}
             </div>
-            <span className="ml-2 font-medium text-gray-200">{username}</span>
-            <span className="ml-2 text-xs text-gray-500">{time}</span>
+            <span className="ml-2 font-medium text-white">{username}</span>
+            <span className="ml-2 text-xs text-white">{time}</span>
           </div>
-          <p className="text-gray-300 mb-3 font-light">{content}</p>
-          <div className="flex justify-between text-gray-500 text-sm">
+          <p className="text-content opacity-90 mb-3 font-light">{content}</p>
+          <div className="flex justify-between text-white text-sm">
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className={`flex items-center ${isLiked ? 'text-blue-400' : 'hover:text-blue-400'}`}
+              className={`flex items-center ${isLiked ? 'text-active' : 'hover:text-white'}`}
               onClick={handleLike}
             >
               <ThumbsUp className="mr-1 h-4 w-4" /> {likeCount}
@@ -70,7 +70,7 @@ const Post: React.FC<PostProps> = ({username, content, likes, comments, time }) 
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="flex items-center hover:text-green-400"
+              className="flex items-center hover:text-active"
               onClick={handleShowComments}
             >
               <MessageSquare className="mr-1 h-4 w-4" /> {comments.length}
@@ -78,7 +78,7 @@ const Post: React.FC<PostProps> = ({username, content, likes, comments, time }) 
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="flex items-center hover:text-purple-400"
+              className="flex items-center hover:text-active"
             >
               <Share2 className="mr-1 h-4 w-4" /> Share
             </motion.button>
@@ -99,7 +99,7 @@ const Post: React.FC<PostProps> = ({username, content, likes, comments, time }) 
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="mt-2 text-sm text-blue-400 hover:text-blue-300"
+                className="mt-2 text-sm text-content hover:text-active"
                 onClick={handleLoadMoreComments}
               >
                 Load More Comments

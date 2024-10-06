@@ -3,81 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --card: #ffffff;
-  --card-foreground: #171717;
-  --popover: #ffffff;
-  --popover-foreground: #171717;
-  --primary: #171717;
-  --primary-foreground: #ffffff;
-  --secondary: #f2f2f2;
-  --secondary-foreground: #171717;
-  --muted: #f2f2f2;
-  --muted-foreground: #737373;
-  --accent: #f2f2f2;
-  --accent-foreground: #171717;
-  --destructive: #d03434;
-  --destructive-foreground: #ffffff;
-  --border: #e5e5e5;
-  --input: #e5e5e5;
-  --ring: #171717;
-  --chart-1: #0c4c81;
-  --chart-2: #af3a55;
-  --chart-3: #c52531;
-  --chart-4: #2b4a61;
-  --chart-5: #1b5741;
-  --radius: 0.5rem;
-  --post-border: 215 27.9% 16.9%;
-  --post-username: 0 0% 98%;
-  --post-time: 217.9 10.6% 64.9%;
-  --post-content: 0 0% 98%;
-  --post-action: 217.9 10.6% 64.9%;
-  --post-action-hover-like: 221 83% 53%;
-  --post-action-hover-comment: 142 71% 45%;
-  --post-action-hover-share: 270 95% 75%;
-  --load-more: 221 83% 53%;
-  --load-more-hover: 221 83% 65%;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --card: #0a0a0a;
-    --card-foreground: #ededed;
-    --popover: #0a0a0a;
-    --popover-foreground: #ededed;
-    --primary: #ededed;
-    --primary-foreground: #0a0a0a;
-    --secondary: #121212;
-    --secondary-foreground: #ededed;
-    --muted: #121212;
-    --muted-foreground: #7f7f7f;
-    --accent: #121212;
-    --accent-foreground: #ededed;
-    --destructive: #ff5f5f;
-    --destructive-foreground: #ededed;
-    --border: #121212;
-    --input: #121212;
-    --ring: #ededed;
-    --post-border: 215 27.9% 16.9%;
-    --post-username: 0 0% 98%;
-    --post-time: 217.9 10.6% 64.9%;
-    --post-content: 0 0% 98%;
-    --post-action: 217.9 10.6% 64.9%;
-    --post-action-hover-like: 221 83% 53%;
-    --post-action-hover-comment: 142 71% 45%;
-    --post-action-hover-share: 270 95% 75%;
-    --load-more: 221 83% 53%;
-    --load-more-hover: 221 83% 65%;
-  }
+  --background: hsl(195, 80%, 7%);
+  --foreground: hsl(204, 45%, 98%);
+  --primary: hsl(195, 80%, 7%);
+  --secondary: hsl(215, 28%, 17%);
+  --white: hsl(204, 45%, 98%);
+  --content: hsl(210, 36%, 89%);
+  --active: hsl(205, 100%, 71.21%);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-nunito-sans);
 }
 
 @layer utilities {
@@ -88,7 +26,7 @@ body {
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-secondary;
   }
   body {
     @apply bg-background text-foreground;
