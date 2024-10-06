@@ -80,8 +80,8 @@ export default function SettingsPage() {
         />
 
         {/* Main Content */}
-        <div className="flex-1 p-6 overflow-auto bg-[#1e2330]">
-          <h2 className="text-2xl font-bold text-gray-200 mb-6">
+        <div className="flex-1 p-6 overflow-auto bg-content-bg">
+          <h2 className="text-2xl font-bold text-white mb-6">
             Contact Info
           </h2>
           <AccountCard

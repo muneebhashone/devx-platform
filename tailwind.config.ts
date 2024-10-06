@@ -8,15 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-nunito-sans)"],
+      },
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',
-        text: 'var(--text)',
+        white: 'var(--white)',
+        active: 'var(--active)',
+        content: 'var(--content)',
       },
     }
-  },
+  },  
   plugins: [require("tailwindcss-animate")],
 };
 

@@ -3,17 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --background: #03191E;
-  --foreground: #F8FAFC;
-  --primary: #03191E;
-  --secondary: #1F2937;
-  --text: #F8FAFC;
+  --background: hsl(195, 80%, 7%);
+  --foreground: hsl(204, 45%, 98%);
+  --primary: hsl(195, 80%, 7%);
+  --secondary: hsl(215, 28%, 17%);
+  --white: hsl(204, 45%, 98%);
+  --content: hsl(210, 36%, 89%);
+  --active: hsl(205, 100%, 71.21%);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-nunito-sans);
 }
 
 @layer utilities {
