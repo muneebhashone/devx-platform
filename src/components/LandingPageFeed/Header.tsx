@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Menu, Search,Users } from "lucide-react";
+import { Menu, Search, Users } from "lucide-react";
 
 import AnimatedNotificationMenu from "./AnimatedNotificationMenu";
 
@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <header className="fixed top-0 left-0 right-0 bg-primary border-b border-secondary py-2 px-4 z-50">
-      <div className="mx-auto flex justify-between items-center">
+      <div className="mx-auto flex justify-between items-center max-w-[1440px] mx-auto">
         <motion.button
           whileTap={{ scale: 0.95 }}
           className="lg:hidden text-white"
@@ -38,9 +38,6 @@ const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
         <div className="flex items-center space-x-4">
-         
-     
-
           <div className="hidden md:block">
             <AnimatedNotificationMenu />
           </div>

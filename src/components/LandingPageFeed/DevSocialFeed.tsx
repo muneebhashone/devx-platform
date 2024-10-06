@@ -91,25 +91,28 @@ const DevSocialFeed: React.FC = () => {
   const [rightSidebarOpen, setRightSidebarOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-primary text-white font-sans">
-      <BackgroundGradient />
+    <>
       <Header
         toggleLeftSidebar={() => setLeftSidebarOpen(!leftSidebarOpen)}
         toggleRightSidebar={() => setRightSidebarOpen(!rightSidebarOpen)}
       />
-      <LeftSidebar
-        isOpen={leftSidebarOpen}
-        onClose={() => setLeftSidebarOpen(false)}
-      />
-      <RightSidebar
-        isOpen={rightSidebarOpen}
-        onClose={() => setRightSidebarOpen(false)}
-      />
-      <div className="relative z-10 md:max-w-[50%] lg:max-w-[40%] mx-auto p-4 mt-16">
-        <PostForm />
-        <PostList posts={posts} />
+      <div className="relative min-h-screen overflow-hidden bg-primary text-white font-sans max-w-[1440px] mx-auto">
+        <BackgroundGradient />
+
+        <LeftSidebar
+          isOpen={leftSidebarOpen}
+          onClose={() => setLeftSidebarOpen(false)}
+        />
+        <RightSidebar
+          isOpen={rightSidebarOpen}
+          onClose={() => setRightSidebarOpen(false)}
+        />
+        <div className="relative z-10 md:max-w-[50%] lg:max-w-[40%] mx-auto p-4 mt-16">
+          <PostForm />
+          <PostList posts={posts} />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
