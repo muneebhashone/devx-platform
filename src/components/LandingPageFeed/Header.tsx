@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({
           <div className="relative w-full">
             <input
               type="text"
-              placeholder="Search DevFlow"
+              placeholder="Search devX"
               className="w-full bg-gray-700 text-white rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-secondary"
             />
             <Search className="absolute left-3 top-2.5 h-5 w-5 text-white" />
