@@ -16,12 +16,12 @@ import {
   dummySidebarItems,
   dummyStories,
 } from "../../dummyData/profileData";
-import Header from "../LandingPageFeed/Header";
+
 import SocialLink from "./SocialLink";
 import FollowerInfo from "./FollowerInfo";
 import PrimaryContent from "../PrimaryContent";
 import PrimaryHeading from "../PrimaryHeading";
-
+import MainLayout from "../MainLayout";
 
 const UserProfileComponent: React.FC = () => {
   const [selectedStoryIndex, setSelectedStoryIndex] = useState<number | null>(
@@ -60,81 +60,74 @@ const UserProfileComponent: React.FC = () => {
   };
 
   return (
-    <>
-      <Header toggleLeftSidebar={() => {}} toggleRightSidebar={() => {}} />
-      {/* <BackgroundGradient /> */}
-      <div className="bg-gradient-to-br from-primary via-secondary to-primary">
-        <div className="max-w-[1440px] mx-auto py-24">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {/* Left sidebar */}
-            <div className="md:col-span-1 lg:col-span-1">
-              <div className="bg-primary rounded-lg overflow-hidden">
-                <ProfileHeader
-                  coverPhoto="/assets/images/profile.png"
-                  profilePhoto="/assets/images/profile.png"
-                  username="Chris Coyier"
-                  handle="chriscoyier"
-                />
-                <div className="p-6 pt-0">
-                  <div className="mb-6">
-                    <PrimaryHeading heading="About" />
-                    <PrimaryContent content="Web designer and developer. Co-founder of CodePen. Host of ShopTalk Show. Creator of CSS-Tricks." />
-                  </div>
-                  <ProfileSidebarList sidebarItems={dummySidebarItems} />
-                  <div className="mt-6">
-                    <FollowerInfo followers={10800} following={274} />
-                    <div className="space-y-2 text-sm text-content mb-6">
-                      <SocialLink icon={<Github />} text="@codepen" />
-                      <SocialLink
-                        icon={<Mail />}
-                        text="chriscoyier@gmail.com"
-                      />
-                      <SocialLink icon={<MapPin />} text="Bend, Oregon" />
-                      <SocialLink icon={<LinkIcon />} text="chriscoyier.net" />
-                    </div>
-                    <Button className="w-full bg-secondary font-semibold text-white py-2 px-4 rounded transition duration-300 ease-in-out hover:bg-active hover:text-white">
-                      Follow
-                    </Button>
-                  </div>
+    <MainLayout toggleLeftSidebar={() => {}} toggleRightSidebar={() => {}}>
+      <div className="max-w-[1440px] mx-auto py-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {/* Left sidebar */}
+          <div className="md:col-span-1 lg:col-span-1">
+            <div className="bg-primary rounded-lg overflow-hidden">
+              <ProfileHeader
+                coverPhoto="/assets/images/profile.png"
+                profilePhoto="/assets/images/profile.png"
+                username="Chris Coyier"
+                handle="chriscoyier"
+              />
+              <div className="p-6 pt-3">
+                <Button className="w-full bg-secondary mb-3 font-semibold text-white py-2 px-4 rounded transition duration-300 ease-in-out hover:bg-active hover:text-white">
+                  Follow
+                </Button>
+                <FollowerInfo followers={10800} following={274} />
+                <div className="mb-6 mt-3">
+                  <PrimaryHeading heading="About" />
+                  <PrimaryContent content="Web designer and developer. Co-founder of CodePen. Host of ShopTalk Show. Creator of CSS-Tricks." />
                 </div>
-              </div>
-            </div>
+                <ProfileSidebarList sidebarItems={dummySidebarItems} />
 
-            {/* Main content */}
-            <div className="md:col-span-2 lg:col-span-3">
-              <div className="grid gap-8">
-                <div className="bg-primary rounded-lg p-6">
-                  <PrimaryHeading heading="Stories" />
-                  <StorySection
-                    stories={stories}
-                    onStoryClick={handleStoryClick}
-                  />
-                </div>
-                {/* Feed */}
-                <div className="bg-primary rounded-lg p-6">
-                  <PrimaryHeading heading="Feed" />
-                  {/* <PostForm /> */}
-                  <PostList posts={dummyPosts} />
+                <div className="space-y-2 text-sm text-content mb-6">
+                  <PrimaryHeading heading="Location" className="mb-3" />
+                  <SocialLink icon={<Github />} text="@codepen" />
+                  <SocialLink icon={<Mail />} text="chriscoyier@gmail.com" />
+                  <SocialLink icon={<MapPin />} text="Bend, Oregon" />
+                  <SocialLink icon={<LinkIcon />} text="chriscoyier.net" />
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Main content */}
+          <div className="md:col-span-2 lg:col-span-3">
+            <div className="grid gap-8">
+              <div className="bg-primary rounded-lg p-6">
+                <PrimaryHeading heading="Stories" />
+                <StorySection
+                  stories={stories}
+                  onStoryClick={handleStoryClick}
+                />
+              </div>
+              {/* Feed */}
+              <div className="bg-primary rounded-lg p-6">
+                <PrimaryHeading heading="Feed" />
+                {/* <PostForm /> */}
+                <PostList posts={dummyPosts} />
+              </div>
+            </div>
+          </div>
         </div>
-        {selectedStoryIndex !== null && (
-          <StoryModal
-            stories={stories.filter((story) => !story.isAddStory)}
-            initialStoryIndex={selectedStoryIndex}
-            onClose={handleCloseModal}
-          />
-        )}
-        {isUploadModalOpen && (
-          <StoryUploadModal
-            onClose={() => setIsUploadModalOpen(false)}
-            onUpload={handleUpload}
-          />
-        )}
       </div>
-    </>
+      {selectedStoryIndex !== null && (
+        <StoryModal
+          stories={stories.filter((story) => !story.isAddStory)}
+          initialStoryIndex={selectedStoryIndex}
+          onClose={handleCloseModal}
+        />
+      )}
+      {isUploadModalOpen && (
+        <StoryUploadModal
+          onClose={() => setIsUploadModalOpen(false)}
+          onUpload={handleUpload}
+        />
+      )}
+    </MainLayout>
   );
 };
 

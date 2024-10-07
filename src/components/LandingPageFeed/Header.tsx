@@ -43,15 +43,14 @@ const Header: React.FC<HeaderProps> = ({
           </div>
           <motion.button
             whileTap={{ scale: 0.95 }}
-            className="text-white hidden md:block"
-            onClick={toggleRightSidebar}
+            className="text-white md:block hidden"
           >
             <ProfileMenu />
           </motion.button>
 
           <motion.button
             whileTap={{ scale: 0.95 }}
-            className="lg:hidden text-white"
+            className="md:hidden block text-white"
             onClick={toggleRightSidebar}
           >
             <Users className="h-6 w-6" />
