@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <header className="fixed top-0 left-0 right-0 bg-primary border-b border-secondary py-2 px-4 z-50">
-      <div className="mx-auto flex justify-between items-center max-w-[1440px] mx-auto">
+      <div className="flex justify-between items-center max-w-[1440px] mx-auto">
         <motion.button
           whileTap={{ scale: 0.95 }}
           className="lg:hidden text-white"
@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({
           <div className="relative w-full">
             <input
               type="text"
-              placeholder="Search devX"
+              placeholder="Search"
               className="w-full bg-gray-700 text-white rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-secondary"
             />
             <Search className="absolute left-3 top-2.5 h-5 w-5 text-white" />

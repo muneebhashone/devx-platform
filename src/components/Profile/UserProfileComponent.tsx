@@ -17,6 +17,10 @@ import {
   dummyStories,
 } from "../../dummyData/profileData";
 import Header from "../LandingPageFeed/Header";
+import SocialLink from "./SocialLink";
+import FollowerInfo from "./FollowerInfo";
+import PrimaryContent from "../PrimaryContent";
+import PrimaryHeading from "../PrimaryHeading";
 
 
 const UserProfileComponent: React.FC = () => {
@@ -58,7 +62,8 @@ const UserProfileComponent: React.FC = () => {
   return (
     <>
       <Header toggleLeftSidebar={() => {}} toggleRightSidebar={() => {}} />
-      <div className="bg-secondary">
+      {/* <BackgroundGradient /> */}
+      <div className="bg-gradient-to-br from-primary via-secondary to-primary">
         <div className="max-w-[1440px] mx-auto py-24">
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {/* Left sidebar */}
@@ -72,33 +77,22 @@ const UserProfileComponent: React.FC = () => {
                 />
                 <div className="p-6 pt-0">
                   <div className="mb-6">
-                    <h2 className="text-lg font-semibold mb-2">About</h2>
-                    <p className="text-sm text-content">
-                      Web designer and developer. Co-founder of CodePen. Host of
-                      ShopTalk Show. Creator of CSS-Tricks.
-                    </p>
+                    <PrimaryHeading heading="About" />
+                    <PrimaryContent content="Web designer and developer. Co-founder of CodePen. Host of ShopTalk Show. Creator of CSS-Tricks." />
                   </div>
                   <ProfileSidebarList sidebarItems={dummySidebarItems} />
                   <div className="mt-6">
-                    <p className="text-sm text-white mb-4">
-                      10.8k followers · 274 following
-                    </p>
+                    <FollowerInfo followers={10800} following={274} />
                     <div className="space-y-2 text-sm text-content mb-6">
-                      <p className="flex items-center">
-                        <Github className="mr-2" size={16} /> @codepen
-                      </p>
-                      <p className="flex items-center">
-                        <Mail className="mr-2" size={16} />{" "}
-                        chriscoyier@gmail.com
-                      </p>
-                      <p className="flex items-center">
-                        <MapPin className="mr-2" size={16} /> Bend, Oregon
-                      </p>
-                      <p className="flex items-center">
-                        <LinkIcon className="mr-2" size={16} /> chriscoyier.net
-                      </p>
+                      <SocialLink icon={<Github />} text="@codepen" />
+                      <SocialLink
+                        icon={<Mail />}
+                        text="chriscoyier@gmail.com"
+                      />
+                      <SocialLink icon={<MapPin />} text="Bend, Oregon" />
+                      <SocialLink icon={<LinkIcon />} text="chriscoyier.net" />
                     </div>
-                    <Button className="w-full bg-secondary font-semibold text-white py-2 px-4 rounded transition duration-300 ease-in-out">
+                    <Button className="w-full bg-secondary font-semibold text-white py-2 px-4 rounded transition duration-300 ease-in-out hover:bg-active hover:text-white">
                       Follow
                     </Button>
                   </div>
@@ -110,9 +104,7 @@ const UserProfileComponent: React.FC = () => {
             <div className="md:col-span-2 lg:col-span-3">
               <div className="grid gap-8">
                 <div className="bg-primary rounded-lg p-6">
-                  <h2 className="text-xl font-bold mb-4 text-gray-200">
-                    Stories
-                  </h2>
+                  <PrimaryHeading heading="Stories" />
                   <StorySection
                     stories={stories}
                     onStoryClick={handleStoryClick}
@@ -120,7 +112,7 @@ const UserProfileComponent: React.FC = () => {
                 </div>
                 {/* Feed */}
                 <div className="bg-primary rounded-lg p-6">
-                  <h2 className="text-xl text-white font-bold mb-8">Feed</h2>
+                  <PrimaryHeading heading="Feed" />
                   {/* <PostForm /> */}
                   <PostList posts={dummyPosts} />
                 </div>
